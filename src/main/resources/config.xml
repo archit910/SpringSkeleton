@@ -15,12 +15,13 @@
         <property name="name" value="MySQL"></property>
     </bean>
 
-    <bean name = "coffee" class="com.spring.demo.Coffee"></bean>
+    <!--<bean name = "coffee" class="com.spring.demo.Coffee"></bean>-->
 
-    <bean name = "tea" class= "com.spring.demo.Tea" ></bean>
+    <!--<bean name = "tea" class= "com.spring.demo.Tea" ></bean>-->
 
-    <bean name="restraunt" class="com.spring.demo.Restraunt" autowire="byName">
+    <!--<bean name="restraunt" class="com.spring.demo.Restraunt">-->
+        <!--<property name="coffee" ref="coffee"></property>-->
 
-    </bean>
+    <!--</bean>-->
 
 </beans>
