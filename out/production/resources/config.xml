@@ -2,6 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop = "http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
@@ -10,18 +11,7 @@
     <context:annotation-config/>
     <context:component-scan base-package="com.spring.demo"/>
 
-    <bean name = "databaseBean" class="com.spring.demo.Database">
-        <property name="port" value="122"></property>
-        <property name="name" value="MySQL"></property>
-    </bean>
 
-    <!--<bean name = "coffee" class="com.spring.demo.Coffee"></bean>-->
 
-    <!--<bean name = "tea" class= "com.spring.demo.Tea" ></bean>-->
-
-    <!--<bean name="restraunt" class="com.spring.demo.Restraunt">-->
-        <!--<property name="coffee" ref="coffee"></property>-->
-
-    <!--</bean>-->
 
 </beans>
