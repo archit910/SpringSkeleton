@@ -1,20 +1,26 @@
 package com.spring.demo;
+//
 
-import org.springframework.context.ApplicationContext;
+//
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 
 public class Application {
 
-    public static void main(String[] args) {
-        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(Config.class);
+    public static void main(String[] args)  {
+        System.out.println("Archit Chauhan");
+        ConfigurableApplicationContext applicationContext = new AnnotationConfigApplicationContext(Config.class);
         User u = applicationContext.getBean("user" , User.class);
-        System.out.println(u.getX() + " " + u.integer);
-        User u1 = applicationContext.getBean("user" , User.class);
-        System.out.println(u1.getX() + " " + u1.integer);
+        applicationContext.start();
+        System.out.println(u.getX());
 
+        CustomEvent event = new CustomEvent(u);
+        CustomPublisher publisher = applicationContext.getBean("customPublisher" , CustomPublisher.class);
 
+        publisher.publish(event);
 
     }
+
 
 }
