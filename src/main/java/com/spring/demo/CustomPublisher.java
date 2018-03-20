@@ -13,9 +13,9 @@ public class CustomPublisher implements ApplicationEventPublisherAware {
         publisher = applicationEventPublisher;
     }
 
-    public void publish(CustomEvent event){
+    public void publish(){
         System.out.println("Publishing the Event");
         CustomEvent ce = new CustomEvent(this);
-        publisher.publishEvent(event);
+        publisher.publishEvent(ce);
     }
 }

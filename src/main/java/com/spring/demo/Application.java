@@ -15,10 +15,10 @@ public class Application {
         applicationContext.start();
 
 
-        CustomEvent event = new CustomEvent(u);
+
         CustomPublisher publisher = applicationContext.getBean("customPublisher" , CustomPublisher.class);
 
-        publisher.publish(event);
+        publisher.publish();
 
     }
 
