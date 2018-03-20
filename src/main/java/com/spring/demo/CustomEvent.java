@@ -16,12 +16,15 @@ public class CustomEvent extends ApplicationEvent{
     public CustomEvent(Object source) {
         super(source);
 
-        System.out.println("This is My Custom Event Fired !! ");
+//        System.out.println("This is My Custom Event Fired !! ");
 
     }
 
     @Override
     public String toString() {
         return "My Custom Event";
+    }
+    public void check() {
+        System.out.println("This is inside the Event");
     }
 }

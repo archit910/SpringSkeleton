@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class CustomPublisher implements ApplicationEventPublisherAware {
-    ApplicationEventPublisher publisher;
+    private ApplicationEventPublisher publisher;
 
     @Override
     public void setApplicationEventPublisher(ApplicationEventPublisher applicationEventPublisher) {
@@ -14,6 +14,8 @@ public class CustomPublisher implements ApplicationEventPublisherAware {
     }
 
     public void publish(CustomEvent event){
+        System.out.println("Publishing the Event");
+        CustomEvent ce = new CustomEvent(this);
         publisher.publishEvent(event);
     }
 }

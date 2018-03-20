@@ -13,7 +13,7 @@ public class Application {
         ConfigurableApplicationContext applicationContext = new AnnotationConfigApplicationContext(Config.class);
         User u = applicationContext.getBean("user" , User.class);
         applicationContext.start();
-        System.out.println(u.getX());
+
 
         CustomEvent event = new CustomEvent(u);
         CustomPublisher publisher = applicationContext.getBean("customPublisher" , CustomPublisher.class);
